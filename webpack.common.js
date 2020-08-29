@@ -94,12 +94,7 @@ module.exports = {
       chunks: ["index"],
       filename: "index2.html",
     }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/pipe.html",
-      inject: true,
-      chunks: ["pipe"],
-      filename: "pipe.html",
-    }),
+  
     
   ],
 };
