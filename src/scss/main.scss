@@ -3,6 +3,18 @@
 @import "_variables";
 @import "modules/hello.scss";
 
+@keyframes link_colorChange
+{
+    from
+    {
+        color: yellowgreen;
+    }
+    to
+    {
+        color: violet;
+    }
+}
+
 html
 {
     box-sizing:border-box;
@@ -53,7 +65,6 @@ nav a {
     display: flex;
     justify-content: center;
     box-sizing:content-box;
-    color: yellowgreen
 
 }
 
@@ -66,6 +77,10 @@ nav a {
         {
             visibility: visible;  
         }
+    }
+    &__link
+    {
+        animation: link_colorChange 1s ease-in infinite;
     }
 }
 
