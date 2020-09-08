@@ -94,6 +94,12 @@ module.exports = {
       chunks: ["index"],
       filename: "index2.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/repos.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "repos.html",
+    }),
 
     
   ],

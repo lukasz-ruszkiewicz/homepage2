@@ -7,6 +7,21 @@ import moment from 'moment';
 
 /* place your code below */
 
+fetch('https://api.github.com/users/lukasz-ruszkiewicz/repos?sort=created&direction=asc')
+.then(resp => resp.json())
+.then(resp => {
+    for(let repo of resp)
+    {
+        const {name,repourl} = repo;
+        const repoList = document.querySelector('repo-list');
+        const myTemplate = `<li>
+        ${name} <a href = "${repourl}">link do githuba</a>
+        </li>`;
+        repoList.innerHTML +=myTemplate;
+    }
+})
+.catch(error => {console.log("ERROR");})
+
 console.log('HELLO 🚀')
 
 const name = "Gość";
@@ -37,3 +52,4 @@ function toggleMenu()
 {
     menu.classList.toggle('site-navigation__menu--open');
 }
+
